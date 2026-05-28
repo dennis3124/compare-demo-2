@@ -24,6 +24,6 @@ export function proratedCredit(
   monthlyCents: number,
   daysRemaining: number,
 ): number {
-  const basisDays = tier === 'enterprise' ? daysInCurrentCalendarMonth() : 30;
+  const basisDays = tier === 'enterprise' ? 30 : daysInCurrentCalendarMonth();
   return creditForBasis(monthlyCents, daysRemaining, basisDays);
 }
