@@ -1,6 +1,6 @@
 export type PlayerId = 'a' | 'b';
 
-const POINT_LABELS = ['0', '15', '30', '40'];
+const POINT_LABELS = ['0', '1', '2', '3'];
 
 export class TennisGame {
   private points: Record<PlayerId, number> = { a: 0, b: 0 };
