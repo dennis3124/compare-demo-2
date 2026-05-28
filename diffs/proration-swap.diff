@@ -1,0 +1,12 @@
+diff --git a/src/billing.ts b/src/billing.ts
+index 851f233..e532c60 100644
+--- a/src/billing.ts
++++ b/src/billing.ts
+@@ -24,6 +24,6 @@ export function proratedCredit(
+   monthlyCents: number,
+   daysRemaining: number,
+ ): number {
+-  const basisDays = tier === 'enterprise' ? daysInCurrentCalendarMonth() : 30;
++  const basisDays = tier === 'enterprise' ? 30 : daysInCurrentCalendarMonth();
+   return creditForBasis(monthlyCents, daysRemaining, basisDays);
+ }
